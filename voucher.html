@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        body {margin: 0px;background-color: #fbfbfb;}
+        .maincontent {text-align: center;margin-right: auto;margin-left: auto;}
+        .middletext{text-align: center;margin-right:auto;margin-left:auto;}
+        .bigdiv {width: 755px;border-radius: 15px;-moz-box-shadow:0px 1px 5px #333333; -webkit-box-shadow:0px 1px 5px #333333; box-shadow:0px 1px 5px #333333;}
+
+        .datetable td {width: 200px}
+        .logo{width: 750px;/* height: 300px; *//* background-color: gray; */}
+        .logoimg{width: 750px;border-radius:10px;}
+        .order{background-color: #ffffff;height: 170px;border-radius:10px;}
+        .date{background-color: #F7F7F7;border-radius:10px;margin-top:15px;}
+        .orderspan{color: #018a01;font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';font-size: 22px}
+        .poipic{width: 210px;height: 120px;margin-top: 30px; border-radius:10px;}
+        .hotel{background-color: #ffffff;height: 250px;border-radius:10px;}
+        .contact{background-color: #F7F7F7;height: 200px;border-radius:10px;}
+
+        .ordertable td {float: left;    text-align: left;}
+        .mostfont {font-size: 15px;}
+        .seet{line-height: 32px;font-size: 22px;color:#018a01;width: 32px;}
+        .ordertd{width: 440px}
+        .name{font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight: 700;font-style: normal;font-size: 18px;margin-bottom: 5px;margin-top: 40px;}
+        .phone{font-family: 'PingFangSC-Regular', 'PingFang SC';font-weight: 400;font-style: normal;margin-top: 0px}
+        .datefont{font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight: 700;font-style: normal;font-size: 20px;color: rgba(0, 51, 51, 0.847058823529412);}
+        .datetitle{font-family: 'ArialMT', 'Arial';font-weight: 400;font-style: normal;font-size: 18px}
+        .hrhr{width:80%;height:1px;border:none;border-top:1px solid #555555;padding-bottom: 10px;padding-top: 10px;margin-top: 30px;}
+
+        .poiname{font-family: 'PingFangSC-Regular', 'PingFang SC';font-weight: 400;font-style: normal;font-size: 16px;}
+        .poiaddress{font-family:'ArialMT', 'Arial';font-weight: 400;font-style: normal;font-size: 15px; padding-top:10px;margin-bottom: 5px !important;}
+        .poiaddress2{font-family:'PingFangSC-Regular', 'PingFang SC';font-weight: 400;font-style: normal;font-size: 15px; margin-top: 0px !important;}
+        .hoteldiv{margin-bottom:50px}
+
+        .contacttitle{font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight: 700;font-style: normal;font-size: 18px;}
+        .contactitem{font-family: 'ArialMT', 'Arial';font-weight: 400;font-style: normal;font-size: 15px;}
+        .contactvalue{color:#169BD5;}
+    </style>
+</head>
+
+
+<title>voucher</title>
+<body>
+    <div class="maincontent bigdiv">
+        <table class="maincontent">
+            <tr>
+                <td class="logo">
+                    <div >
+                        <img class="logoimg" src="http://b2c.static.dev.s3-website-ap-southeast-1.amazonaws.com/tp/email/logo.png" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="order">
+                    <div>
+                        <table class="middletext ordertable">
+                            <tr>
+                                <td class="seet"><img src="http://b2c.static.dev.s3-website-ap-southeast-1.amazonaws.com/tp/email/check.png"/></td>
+                                <td class="ordertd"><span class="orderspan orderh">Booking Succeed！</span><span class="mostfont">(order_no: </span><span class="mostfont">1234 4567 7890 1234</span><span class="mostfont">)</span></td>
+                            </tr>
+                            <tr>
+                                <td class="seet"></td>
+                                <td class="ordertd">
+                                    <span class="mostfont"> Congratulations！The restaurant has confirmed your reservation , please come to the restaurant on time.</span>
+                                </td>
+                            </tr>
+                        </table>
+                           
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="date">
+                    <div>
+                            <p class="name">Mr. Nicolas Cage</p>
+                            <p class="phone">(+852 88888888)</p>
+                            <hr  class="hrhr" />
+                            <table class="datetable middletext">
+                                <tr>
+                                    <td class="datefont">Mon,Dec 31</td>
+                                    <td rowspan="2" style="width: 1px"><div style="float:left;width: 1px;height: 100px; background: #000;"></div> </td>
+                                    <td class="datefont">22:00</td>
+                                    <td rowspan="2" style="width: 1px"><div style="float:left;width: 1px;height: 100px; background: #000;"></div> </td>
+                                    <td class="datefont">2</td>
+                                </tr>
+                                <tr>
+                                    <td class="datetitle">Date</td>
+                                    <td class="datetitle">Time</td>
+                                    <td class="datetitle">Seats</td>
+                                </tr>
+                            </table>
+                            <hr  class="hrhr" />
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="hotel">
+                    <div class="hoteldiv">
+                            <img class="poipic" src="http://b2c.static.dev.s3-website-ap-southeast-1.amazonaws.com/tp/email/mylogo.png" />
+                            <p class="poiname">Sonata Western Restautant</p>
+                            <p class="poiaddress">addressfadhakh hjhkjhkjhkjhksdafadfafahj</p>
+                            <p class="poiaddress2"> daf dfaer werwer</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="contact">
+                    <div>
+                        <p class="contacttitle">Contact Us</p>
+                        <p class="contactitem">handy customer service 24/7 hotline</p>
+                        <p class="contactitem">Phone <span class="contactvalue">+852 8128 8228</span></p>
+                        <p class="contactitem">Email <a class="contactvalue" href="tickets@handy.travel">tickets@handy.travel</a></p>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
