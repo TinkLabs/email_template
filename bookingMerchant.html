@@ -65,12 +65,12 @@
                         <table class="middletext ordertable">
                             <tr>
                                 <td>
-                                    <p class="lettertitle">Dear, #merchant</p>
+                                    <p class="lettertitle">Dear, $merchant.name</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="ordertd">
-                                    <span class="mostfont"> Here is the new booking order from handy,the handy booking number is <br><span class="orderspan">1103 2345 1001 9898</span>. Please email us <a class="contactvalue" href="ttttttttt@tinklabs.com">ttttttttt@tinklabs.com</a> to let us know if you accept the order.</span>
+                                    <span class="mostfont"> Here is the new booking order from handy,the handy booking number is <br><span class="orderspan">$order.number</span>. Please email us <a class="contactvalue" href="$contact.email">$contact.email</a> to let us know if you accept the order.</span>
                                 </td>
                             </tr>
                         </table>
@@ -86,11 +86,13 @@
                         <table class="middletext ordertable">
                                 <tr>
                                     <td class="ordertd">
-                                        <p class="bookingdetail">Sonata Western Restautant</p>
-                                        <p class="bookingdetail">Name:<span class="bookingvalue">Mr. Nicolas Cage</span></p>
-                                        <p class="bookingdetail">Email:<span class="bookingvalue">1234567890@gmail.com</span></p>
-                                        <p class="bookingdetail">Tel: <span class="bookingvalue">852 88888888</span></p>
-                                        <p class="bookingdetail">Remarks:<span class="bookingvalue">Real Estate Marketing Tools. Lowest prices and satisfaction guaranteed. Realtor Promotional</span></p>
+                                        <p class="bookingdetail">$poi.name</p>
+                                        <p class="bookingdetail">Name:<span class="bookingvalue">$order.user</span></p>
+                                        <p class="bookingdetail">Email:<span class="bookingvalue">$order.email</span></p>
+                                        <p class="bookingdetail">Tel: <span class="bookingvalue">$order.phone</span></p>
+                                        #if($order.remark)
+                                        <p class="bookingdetail">Remarks:<span class="bookingvalue">$order.remark</span></p>
+                                        #end
                                     </td>
                                 </tr>
                         </table>
@@ -104,11 +106,11 @@
                                     <hr  class="hrhr" />
                                     <table class="datetable middletext datetablede">
                                         <tr>
-                                            <td class="datefont">Mon,Dec 31</td>
+                                            <td class="datefont">$order.date</td>
                                             <td rowspan="2" style="width: 1px"><div style="float:left;width: 1px;height: 100px; background: #000;"></div> </td>
-                                            <td class="datefont">22:00</td>
+                                            <td class="datefont">$order.time</td>
                                             <td rowspan="2" style="width: 1px"><div style="float:left;width: 1px;height: 100px; background: #000;"></div> </td>
-                                            <td class="datefont">2</td>
+                                            <td class="datefont">$order.seats</td>
                                         </tr>
                                         <tr>
                                             <td class="datetitle">Date</td>

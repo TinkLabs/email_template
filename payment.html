@@ -57,8 +57,8 @@
                     <div>
                         <table class="middletext ordertable">
                             <tr>
-                                <td class="seet"><img src="./accept_check_ok_32px_3665_easyicon.net.png"/></td>
-                                <td class="ordertd"><span class="orderspan orderh">Order Placed！</span><span class="mostfont">(order_no: </span><span class="mostfont">1234 4567 7890 1234</span><span class="mostfont">)</span></td>
+                                <td class="seet"><img src="http://b2c.static.dev.s3-website-ap-southeast-1.amazonaws.com/tp/email/check.png"/></td>
+                                <td class="ordertd"><span class="orderspan orderh">Order Placed！</span><span class="mostfont">(order_no: </span><span class="mostfont">$order.number</span><span class="mostfont">)</span></td>
                             </tr>
                             <tr>
                                 <td class="seet"></td>
@@ -74,16 +74,16 @@
             <tr>
                 <td class="date">
                     <div>
-                            <p class="name">Mr. Nicolas Cage</p>
-                            <p class="phone">(+852 88888888)</p>
+                            <p class="name">$order.user</p>
+                            <p class="phone">$order.phone</p>
                             <hr  class="hrhr" />
                             <table class="datetable middletext">
                                 <tr>
-                                    <td class="datefont">Mon,Dec 31</td>
+                                    <td class="datefont">$order.date</td>
                                     <td rowspan="2" style="width: 1px"><div style="float:left;width: 1px;height: 100px; background: #000;"></div> </td>
-                                    <td class="datefont">22:00</td>
+                                    <td class="datefont">$order.time</td>
                                     <td rowspan="2" style="width: 1px"><div style="float:left;width: 1px;height: 100px; background: #000;"></div> </td>
-                                    <td class="datefont">2</td>
+                                    <td class="datefont">$order.seats</td>
                                 </tr>
                                 <tr>
                                     <td class="datetitle">Date</td>
@@ -98,12 +98,15 @@
             </tr>
             <tr>
                 <td class="hotel">
+                    #if($poi)
                     <div class="hoteldiv">
-                            <img class="poipic" src="http://b2c.static.dev.s3-website-ap-southeast-1.amazonaws.com/tp/email/mylogo.png" />
-                            <p class="poiname">Sonata Western Restautant</p>
-                            <p class="poiaddress">addressfadhakh hjhkjhkjhkjhksdafadfafahj</p>
-                            <p class="poiaddress2"> daf dfaer werwer</p>
+                            #if($poi.pic)
+                            <img class="poipic" src="$poi.pic" />
+                            #end
+                            <p class="poiname">$poi.name</p>
+                            <p class="poiaddress">$poi.address</p>
                     </div>
+                    #end
                 </td>
             </tr>
             <tr>

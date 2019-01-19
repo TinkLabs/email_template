@@ -67,7 +67,7 @@
                             </tr>
                             <tr>
                                 <td class="ordertd ordertdmid"><span class="orderspan orderh">
-                                        #<span>1103 2345 1001 9898</span> (232323wewew)</span></td>
+                                        #<span>$order.id</span> ($order.number)</span></td>
                             </tr>
                             <tr>
 
@@ -82,13 +82,15 @@
                     <div>
                         <p class="name namewidth">Merchant Info</p>
                         <hr class="hrhr2" />
+                        #if($merchant)
+
                         <table class="datetable middletext tableleft">
                             <tr>
                                 <td class="datefont">
                                     Merchant_ID
                                 </td>
                                 <td class="datetitle">
-                                    12345677
+                                    $merchant.id
                                 </td>
                             </tr>
                             <tr>
@@ -96,7 +98,7 @@
                                     Merchant_Name
                                 </td>
                                 <td class="datetitle">
-                                    OpenRice
+                                    $merchant.name
                                 </td>
                             </tr>
                             <tr>
@@ -104,10 +106,11 @@
                                     Merchant_Email
                                 </td>
                                 <td class="datetitle">
-                                    12333333@gmail.com
+                                    $merchant.email
                                 </td>
                             </tr>
                         </table>
+                        #end
                     </div>
                 </td>
             </tr>
@@ -122,7 +125,7 @@
                                             Order_No
                                     </td>
                                     <td class="datetitle">
-                                            1103 2345 1001 9898 ( 232323wewew )
+                                            $order.id ( $order.number )
                                     </td>
                                 </tr>
                                 <tr>
@@ -130,17 +133,20 @@
                                             Order_Time
                                     </td>
                                     <td class="datetitle">
-                                            20181212  12:12:12
+                                            $order.createdAt
                                     </td>
                                 </tr>
+                                 #if($poi)
+
                                 <tr>
                                     <td class="datefont">
                                             POI Name
                                     </td>
                                     <td class="datetitle">
-                                            Sonata Western Restautant
+                                            $poi.name
                                     </td>
                                 </tr>
+                                #end
                             </table>
                         </div>
                     </td>
@@ -148,16 +154,16 @@
                 <tr>
                         <td class="date2">
                             <div>
-                                    <p class="name">Mr. Nicolas Cage</p>
-                                    <p class="phone"> ( +852 88888888 ) </p>
+                                    <p class="name">$order.user</p>
+                                    <p class="phone"> ( +$order.phone ) </p>
                                     <hr  class="hrhr" />
                                     <table class="datetableori middletext datetablede">
                                         <tr>
-                                            <td class="datefont">Mon,Dec 31</td>
+                                            <td class="datefont">$orde.date</td>
                                             <td rowspan="2" style="width: 1px"><div style="float:left;width: 1px;height: 100px; background: #000;"></div> </td>
-                                            <td class="datefont">22:00</td>
+                                            <td class="datefont">$order.time</td>
                                             <td rowspan="2" style="width: 1px"><div style="float:left;width: 1px;height: 100px; background: #000;"></div> </td>
-                                            <td class="datefont">2</td>
+                                            <td class="datefont">$order.seats</td>
                                         </tr>
                                         <tr>
                                             <td class="datetitle">Date</td>
